@@ -1,0 +1,20 @@
+{
+  "name": "hicvoluptatibus",
+  "version": "1.0.0",
+  "workspaces": [
+    "packages/*",
+    "packages/topoconfig/*"
+  ],
+  "description": "A monorepo for everything",
+  "author": "AdeleWeimann",
+  "license": "MIT",
+  "packageManager": "yarn@4.0.2",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/MathiasDaugherty/hicvoluptatibus.git"
+  },
+  "bugs": {
+    "url": "https://github.com/MathiasDaugherty/hicvoluptatibus.git/issues"
+  },
+  "homepage": "https://github.com/MathiasDaugherty/hicvoluptatibus.git"
+}

@@ -1,0 +1,66 @@
+{
+  "name": "@topoconfig/cmds",
+  "version": "0.0.0",
+  "description": "Topoconfig basic cmds preset",
+  "type": "module",
+  "main": "target/cjs/index.cjs",
+  "exports": {
+    ".": {
+      "types": "./target/dts/index.d.ts",
+      "require": "./target/cjs/index.cjs",
+      "import": "./target/esm/index.mjs",
+      "default": "./target/esm/index.mjs"
+    }
+  },
+  "module": "target/esm/index.mjs",
+  "types": "target/dts/index.d.ts",
+  "files": [
+    "target/cjs",
+    "target/esm",
+    "target/dts",
+    "target/coverage/lcov.info"
+  ],
+  "scripts": {
+    "build": "concurrently 'npm:build:*'",
+    "build:index": "yarn build:esbuild",
+    "build:dts": "yarn build:tsc",
+    "build:docs": "yarn build:typedoc",
+    "test": "concurrently 'npm:test:*'",
+    "test:lint": "yarn test:eslint",
+    "test:unit": "yarn test:c8",
+    "publish:draft": "npm publish --no-git-tag-version --tag draft"
+  },
+  "publishConfig": {
+    "access": "public"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/antongolub/misc.git"
+  },
+  "author": "Anton Golub <antongolub@antongolub.com>",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/antongolub/misc/issues"
+  },
+  "homepage": "https://github.com/antongolub/misc/tree/master/packages/topoconfig/cmds",
+  "dependencies": {
+    "ajv": "^8.12.0",
+    "ajv-formats": "^3.0.0-rc.0",
+    "app-root-path": "^3.1.0",
+    "conf": "^12.0.0",
+    "dot": "^2.0.0-beta.1",
+    "dotenv": "^16.3.1",
+    "ip": "^2.0.0",
+    "js-yaml": "^4.1.0",
+    "minimist": "^1.2.8",
+    "read-pkg-up": "^10.1.0",
+    "topoconfig": "workspace:*"
+  },
+  "devDependencies": {
+    "@antongolub/infra": "workspace:*",
+    "@types/dotenv": "^8.2.0",
+    "@types/ip": "^1.1.3",
+    "@types/js-yaml": "^4.0.9",
+    "@types/node": "^20.9.2"
+  }
+}
